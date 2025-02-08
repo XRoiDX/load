@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seal Anime</title>
+    <title>Opening Seal Anime.....</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="door-container">
-        <div class="door" id="door">
-            <div class="door-left"></div>
-            <div class="door-right"></div>
+    <div class="curtain-container">
+        <div class="curtain" id="curtain">
+            <div class="curtain-left"></div>
+            <div class="curtain-right"></div>
         </div>
         <div class="loader-container" id="loader" style="display: none;">
             <div class="loader"></div>
@@ -22,17 +22,17 @@
         // Change the URL to the domain you want to redirect to
         const redirectUrl = "https://managing-griselda-zexo99yaoe-1e8c175a.koyeb.app"; // Replace with your target URL
 
-        // Function to open the door and show the loader
-        function openDoor() {
-            const door = document.getElementById('door');
+        // Function to open the curtain and show the loader
+        function openCurtain() {
+            const curtain = document.getElementById('curtain');
             const loader = document.getElementById('loader');
 
-            // Add class to animate door opening
-            door.classList.add('open');
+            // Add class to animate curtain opening
+            curtain.classList.add('open');
 
-            // Show loader after door opens
+            // Show loader after curtain opens
             setTimeout(() => {
-                door.style.display = 'none';
+                curtain.style.display = 'none';
                 loader.style.display = 'flex';
             }, 2000); // Adjust timing as needed
 
@@ -42,8 +42,8 @@
             }, 4000); // 4000 milliseconds = 4 seconds
         }
 
-        // Start the door opening animation
-        window.onload = openDoor;
+        // Start the curtain opening animation
+        window.onload = openCurtain;
     </script>
 </body>
 </html>
