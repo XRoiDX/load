@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.door-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.door {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 2s ease;
+}
+
+.door-left, .door-right {
+    background-color: #8B4513; /* Brown color for the door */
+    width: 50%;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.door-left {
+    border-right: 2px solid #000;
+    transform-origin: left;
+}
+
+.door-right {
+    border-left: 2px solid #000;
+    transform-origin: right;
+}
+
+.open .door-left {
+    transform: rotateY(-120deg);
+}
+
+.open .door-right {
+    transform: rotateY(120deg);
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    display: none; /* Hidden initially */
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 20px 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
