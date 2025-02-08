@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opening Door Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="door-container">
+        <div class="door" id="door">
+            <div class="door-left"></div>
+            <div class="door-right"></div>
+        </div>
+        <div class="loader-container" id="loader" style="display: none;">
+            <div class="loader"></div>
+            <p>Loading, please wait...</p>
+        </div>
+    </div>
+
+    <script>
+        // Change the URL to the domain you want to redirect to
+        const redirectUrl = "https://www.example.com"; // Replace with your target URL
+
+        // Function to open the door and show the loader
+        function openDoor() {
+            const door = document.getElementById('door');
+            const loader = document.getElementById('loader');
+
+            // Add class to animate door opening
+            door.classList.add('open');
+
+            // Show loader after door opens
+            setTimeout(() => {
+                door.style.display = 'none';
+                loader.style.display = 'flex';
+            }, 2000); // Adjust timing as needed
+
+            // Redirect after a short delay
+            setTimeout(() => {
+                window.location.href = redirectUrl;
+            }, 4000); // 4000 milliseconds = 4 seconds
+        }
+
+        // Start the door opening animation
+        window.onload = openDoor;
+    </script>
+</body>
+</html>
