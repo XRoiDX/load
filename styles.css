@@ -8,14 +8,14 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.door-container {
+.curtain-container {
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
-.door {
+.curtain {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -23,30 +23,28 @@ body {
     transition: transform 2s ease;
 }
 
-.door-left, .door-right {
-    background-color: #8B4513; /* Brown color for the door */
+.curtain-left, .curtain-right {
+    background-color: #8B0000; /* Dark red color for the curtain */
     width: 50%;
     height: 100%;
     position: relative;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.door-left {
-    border-right: 2px solid #000;
+.curtain-left {
     transform-origin: left;
 }
 
-.door-right {
-    border-left: 2px solid #000;
+.curtain-right {
     transform-origin: right;
 }
 
-.open .door-left {
-    transform: rotateY(-120deg);
+.open .curtain-left {
+    transform: translateX(-100%);
 }
 
-.open .door-right {
-    transform: rotateY(120deg);
+.open .curtain-right {
+    transform: translateX(100%);
 }
 
 .loader-container {
